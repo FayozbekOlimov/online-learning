@@ -1,0 +1,35 @@
+@use "../base/base.scss";
+
+.navbar {
+    .container {
+        height: 11vh;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    a {
+        color: base.$text-color1;
+    }
+
+    &__logo a {
+        font-size: 1.6rem;
+        font-family: base.$font-bold;
+    }
+    
+    &__links {
+        list-style: none;
+        display: flex;
+    }
+    
+    &__link {
+        font-size: 1rem;
+
+        &:not(:first-child) {
+            margin-left: 1.5rem;
+        }
+
+        &.active > * {
+            color: base.$primary-color;
+        }
+    }
+}

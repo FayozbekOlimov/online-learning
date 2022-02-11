@@ -1,0 +1,74 @@
+// ===== variables ===== //
+$primary-color: #086cf9;
+$text-color1: #222;
+$font-regular: "DMSans-Regular";
+$font-medium: "DMSans-Medium";
+$font-bold: "DMSans-Bold";
+
+// ===== fonts ===== //
+@font-face {
+    font-family: $font-regular;
+    src: url("../../fonts/DMSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: $font-medium;
+    src: url("../../fonts/DMSans-Medium.ttf");
+}
+
+@font-face {
+    font-family: $font-bold;
+    src: url("../../fonts/DMSans-Bold.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    scroll-behavior: smooth;
+    font-family: $font-regular;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+img {
+    user-select: none;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+}
+
+.btn {
+    background-color: $primary-color;
+    color: #fff !important;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-family: $font-regular;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.54) 100%, rgba(0, 0, 0, 0.54) 100%);
+}
