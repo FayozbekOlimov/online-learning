@@ -1,6 +1,8 @@
 // ===== variables ===== //
 $primary-color: #086cf9;
 $text-color1: #222;
+$text-color2: #333;
+$text-color3: #555;
 $font-regular: "DMSans-Regular";
 $font-medium: "DMSans-Medium";
 $font-bold: "DMSans-Bold";
@@ -41,6 +43,7 @@ a {
 button {
     outline: none;
     border: none;
+    cursor: pointer;
 }
 
 img {

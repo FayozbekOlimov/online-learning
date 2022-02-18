@@ -1,0 +1,111 @@
+@use "../base/base.scss";
+
+.courses {
+    background: #ecf4ff;
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 15px;
+    }
+
+    &__list {
+        width: 100%;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+        align-items: center;
+    }
+
+    &__item {
+        padding: 1rem;
+        border-radius: 6px;
+        background-color: #fff;
+        position: relative;
+
+        &-img {
+            width: 100%;
+            height: 180px;
+            position: relative;
+    
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 6px;
+            }
+        }
+
+        &-info {
+            padding: 1.3rem 0;
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            justify-content: space-between;
+            border-bottom: 0.5px solid #e9e8e8;
+        }
+
+        &-users, &-views, &-rating {
+            display: flex;
+            align-items: center;
+        }
+
+        &-icon, &-logo {
+            width: 32px;
+            height: 32px;
+        }
+
+        &-icon {
+            border: 0.6px solid #c8c8c8;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: base.$primary-color;
+        }
+
+        &-value {
+            margin-left: 8px;
+            color: base.$text-color3;
+        }
+
+        &-logo {
+            position: relative;
+            
+            img {
+                position: absolute;
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        }
+
+        &-name {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        &-title {
+            text-transform: capitalize;
+            color: base.$text-color2;
+        }
+
+        &-price {
+            color: base.$primary-color;
+        }
+
+        &-subtitle {
+            margin-bottom: 1rem;
+            color: base.$text-color3;
+        }
+    }
+
+    .btn {
+        margin-top: 2rem;
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+}
