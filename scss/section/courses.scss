@@ -14,7 +14,6 @@
         display: grid;
         gap: 2rem;
         grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
-        align-items: center;
     }
 
     &__item {
