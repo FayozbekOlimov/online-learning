@@ -9,13 +9,15 @@
 
     &__list {
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
-        gap: 2rem;
+        display: flex;
         justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
     }
 
     &__item {
+        width: 320px;
+        margin: 1rem;
         box-shadow: 0px 12px 45px 0px rgba(0, 0, 0, 0.078);
         border-radius: 6px;
         overflow: hidden;
@@ -53,7 +55,7 @@
         color: base.$text-color1;
         font-family: base.$font-medium;
     }
-    
+
     &__subtitle {
         padding: .6rem 1.2rem 1.2rem;
         width: 100%;

@@ -1,4 +1,3 @@
-@use "./base/base.scss";
 @use "./section/navbar.scss";
 @use "./section/header.scss";
 @use "./section/about.scss";
@@ -6,3 +5,5 @@
 @use "./section/courses.scss";
 @use "./section/mentors.scss";
 @use "./section/event.scss";
+@use "./section/counter.scss";
+@use "./section/blog.scss";
