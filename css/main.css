@@ -19,7 +19,6 @@
 body {
   background-color: #fff;
   font-family: "DMSans-Regular";
-  scroll-behavior: smooth;
 }
 
 a {
@@ -56,9 +55,19 @@ h1, h2, h3, h4, h5, h6 {
 .btn {
   background-color: #086cf9;
   color: #fff !important;
-  padding: 10px 15px;
+  padding: 12px 16px;
   border-radius: 5px;
   font-family: "DMSans-Regular";
+  font-size: 1.1rem;
+  transition: background 0.3s linear;
+}
+
+.btn:hover {
+  background-color: #458df3;
+}
+
+button.btn:active {
+  transform: translateY(1px);
 }
 
 .overlay {
@@ -341,7 +350,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .courses .btn {
   margin-top: 2rem;
-  padding: 15px 20px;
   font-size: 1rem;
 }
 
@@ -530,6 +538,80 @@ h1, h2, h3, h4, h5, h6 {
 .blog .btn {
   margin-top: 2rem;
   padding: 15px 24px;
+  font-size: 1rem;
+}
+
+.testimonials .container {
+  padding: 50px 15px;
+  flex-direction: column;
+  align-items: center;
+}
+.testimonials .splide {
+  width: 100%;
+}
+.testimonials .splide__track {
+  margin: auto;
+  width: 92%;
+}
+.testimonials .splide__slide {
+  width: 315px !important;
+  margin: 1rem;
+  padding: 1rem;
+  box-shadow: 5px 10px 12px rgba(0, 0, 0, 0.078);
+}
+.testimonials .splide__pagination {
+  display: none;
+}
+.testimonials .splide__arrow {
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+  border: 1px solid #D5D4D4;
+  transition: background 0.3s linear;
+}
+.testimonials .splide__arrow svg {
+  fill: #D5D4D4;
+  font-size: 1rem;
+}
+.testimonials .splide__arrow:hover {
+  background-color: #086cf9;
+  border-color: #086cf9;
+}
+.testimonials__txt {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #555;
+}
+.testimonials__about {
+  display: flex;
+}
+.testimonials__logo {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  margin-right: 1rem;
+}
+.testimonials__logo img {
+  border-radius: 50%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.testimonials__name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.testimonials__name h4 {
+  margin-bottom: 6px;
+  color: #222;
+}
+.testimonials__name small {
+  color: #555;
+}
+.testimonials__btns-icon {
+  color: #D5D4D4;
   font-size: 1rem;
 }
 
