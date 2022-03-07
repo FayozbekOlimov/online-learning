@@ -46,6 +46,14 @@
         margin-bottom: 1rem;
     }
 
+    &__title {
+        color: base.$text-color1;
+    }
+
+    &__subtitle {
+        color: base.$text-color3;
+    }
+
     &__link {
         color: base.$primary-color;
     }

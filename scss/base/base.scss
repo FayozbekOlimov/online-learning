@@ -27,6 +27,7 @@ $font-bold: "DMSans-Bold";
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -39,10 +40,20 @@ a {
     text-decoration: none;
 }
 
-button {
+button, input {
     outline: none;
     border: none;
+}
+
+button {
     cursor: pointer;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px #fff inset;
 }
 
 img {
