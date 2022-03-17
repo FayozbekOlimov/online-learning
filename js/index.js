@@ -70,8 +70,51 @@ mentorsData.map(mentor => {
     mentorsList.appendChild(listItem);
 });
 
+// ===== SPLIDE JS ===== //
 new Splide('.splide', {
     type: 'loop',
     perPage: 3,
     focus: 'center',
 }).mount();
+
+
+// ===== VIDEO TAG ===== //
+const video = document.querySelector('.about__video video');
+const playBtn = document.querySelector('.play-btn');
+const videoLine = document.querySelector('.video-line');
+const videoProgress = document.querySelector('.video-line span');
+
+let isPlay = false;
+
+video.addEventListener('click', playVideo);
+video.addEventListener('timeupdate', progress);
+videoLine.addEventListener('click', setProgress);
+
+
+function playVideo() {
+    if (!isPlay) {
+        isPlay = true;
+        video.play();
+        playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        playBtn.classList.add('anim');
+    } else {
+        isPlay = false;
+        video.pause();
+        playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+        playBtn.classList.remove('anim');
+    }
+}
+
+function progress(e) {
+    let duration = e.srcElement.duration,
+        curTime = e.srcElement.currentTime;
+
+    videoProgress.style.width = `${curTime * 100 / duration}%`;
+}
+
+function setProgress(e) {
+    const width = this.clientWidth;
+    const widthX = e.offsetX;
+    const duration = video.duration;
+    video.currentTime = (widthX / width) * duration;
+}
