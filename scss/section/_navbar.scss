@@ -1,8 +1,14 @@
 @use "../base/base.scss";
 
 .navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: #fff;
+    box-shadow: 0px 11px 55px 0px rgba($color: #000000, $alpha: .2);
+
     .container {
-        height: 11vh;
+        height: 75px;
         justify-content: space-between;
         align-items: center;
     }
@@ -15,13 +21,44 @@
         font-size: 1.6rem;
         font-family: base.$font-bold;
     }
-    
+
+    .bar {
+        display: none;
+
+        &__line {
+            background-color: #000;
+            width: 25px;
+            height: 2px;
+            margin: 5px;
+            transition: .5s;
+
+            &:first-child {
+                transform-origin: right top;
+            }
+            &:last-child {
+                transform-origin: right bottom;
+            }
+        }
+
+        .line1 {
+            transform: rotate(-35deg);
+        }
+        .line2 {
+            opacity: 0;
+        }
+        .line3 {
+            transform: rotate(35deg);
+        }
+    }
+
     &__links {
         display: flex;
+        align-items: center;
     }
-    
+
     &__link {
         font-size: 1rem;
+        position: relative;
 
         &:not(:first-child) {
             margin-left: 1.5rem;
@@ -29,6 +66,107 @@
 
         &.active > * {
             color: base.$primary-color;
+        }
+
+        &:not(:last-child) > a {
+            padding-bottom: 23px;
+            border-bottom: solid base.$primary-color;
+            border-bottom-width: 0;
+            transition: all .1s ease;
+
+            &:hover {
+                border-bottom-width: 4px;
+            }
+        }
+    }
+
+    &__dropdown,
+    &__dropdown-1 {
+        display: none;
+    }
+
+    &__link:hover &__dropdown {
+        display: block;
+        position: absolute;
+        z-index: 5;
+        left: 0;
+        top: 48px;
+        background-color: #fff;
+        box-shadow: -5px 5px 5px rgba($color: #000000, $alpha: .2);
+
+        ul li {
+            padding: .5rem;
+            min-width: 150px;
+            position: relative;
+
+            span {
+                float: right;
+            }
+
+            &:hover {
+                background-color: rgba($color: #000000, $alpha: .2);
+            }
+        }
+    }
+
+    &__dropdown ul li:hover &__dropdown-1 {
+        display: block;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        background-color: #fff;
+        box-shadow: 5px 5px 5px rgba($color: #000000, $alpha: .2);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        &__links {
+            height: 100vh;
+            width: 200px;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #fff;
+            align-items: flex-start;
+            flex-direction: column;
+            transform: translateX(100%);
+            transition: all .3s ease;
+
+            &.show-menu {
+                transform: translateX(0%);
+            }
+        }
+
+        .bar {
+            display: block;
+        }
+
+        &__link {
+            margin-left: 0 !important;
+            padding: 10px;
+            width: 100%;
+
+            &:last-child a {
+                display: block;
+            }
+
+            span {
+                float: right;
+            }
+
+            &:not(:last-child) > a {
+                padding-bottom: 0;
+                transition: all .1s ease;
+
+                &:hover {
+                    border-bottom: 0;
+                }
+            }
+        }
+
+        &__link:hover &__dropdown {
+            display: none;
         }
     }
 }

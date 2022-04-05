@@ -118,3 +118,27 @@ function setProgress(e) {
     const duration = video.duration;
     video.currentTime = (widthX / width) * duration;
 }
+
+// ===== NAVBAR ===== //
+const navbarLinks = document.querySelectorAll('.navbar__link');
+
+for (let i = 0; i < navbarLinks.length - 1; i++) {
+    navbarLinks[i].addEventListener('click', function () {
+        for (let j = 0; j < navbarLinks.length - 1; j++) {
+            navbarLinks[j].classList.remove('active');
+        }
+        this.classList.add('active');
+    });
+}
+
+// ===== BAR ===== //
+const bar = document.querySelector('.bar');
+
+bar.addEventListener('click', () => {
+    const lines = bar.querySelectorAll('.bar__line');
+    document.querySelector('.navbar__links').classList.toggle('show-menu');
+
+    lines.forEach((l, index) => {
+        l.classList.toggle(`line${index+1}`);
+    });
+});

@@ -23,15 +23,57 @@
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="container">
-            <div class="navbar__logo">
-                <a href="#">Education</a>
+            <div class="navbar__logo"><a href="#">Education</a></div>
+            <div class="bar">
+                <div class="bar__line"></div>
+                <div class="bar__line"></div>
+                <div class="bar__line"></div>
             </div>
             <ul class="navbar__links">
                 <li class="navbar__link active">
                     <a href="#">Home <span><i class="fas fa-chevron-down"></i></span></a>
+                    <div class="navbar__dropdown">
+                        <ul>
+                            <li>
+                                <a href="#">Home 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Home 2 <span><i class="fas fa-chevron-right"></i></span></a>
+                                <div class="navbar__dropdown-1">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Home 2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Home 2-2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Home 2-3</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">Home 3</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="navbar__link">
                     <a href="#">Courses <span><i class="fas fa-chevron-down"></i></span></a>
+                    <div class="navbar__dropdown">
+                        <ul>
+                            <li>
+                                <a href="#">Course 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Course 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Course 3</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="navbar__link">
                     <a href="#">Page <span><i class="fas fa-chevron-down"></i></span></a>
@@ -371,7 +413,8 @@
         <div class="container">
             <div class="subscribe__box">
                 <h1 class="section__title">What Our Students Say</h1>
-                <p class="section__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit amet.</p>
+                <p class="section__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat mauris
+                    non dictumst in leo. Lorem ipsum dolor sit amet.</p>
                 <form class="subscribe__form">
                     <input type="email" name="email" class="subscribe__form-input" placeholder="Enter your email...">
                     <button type="submit" class="btn">Subscribe</button>
@@ -386,7 +429,8 @@
         <div class="container">
             <div class="footer__education">
                 <h3 class="footer__title">Education</h3>
-                <p class="footer__subtitle">Lorem ipsum dolor sit amet, consectetur adipis cing elit. Amet, vestibulum euismod nullam the elementum. Urna, posuere nisi sit gravid.</p>
+                <p class="footer__subtitle">Lorem ipsum dolor sit amet, consectetur adipis cing elit. Amet, vestibulum
+                    euismod nullam the elementum. Urna, posuere nisi sit gravid.</p>
                 <h3 class="footer__title">Follow Us</h3>
                 <ul class="footer__social">
                     <li class="footer__social-link">
@@ -402,7 +446,7 @@
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </li>
                 </ul>
-                
+
             </div>
             <div class="footer__features">
                 <h3 class="footer__title">Feature Links</h3>
