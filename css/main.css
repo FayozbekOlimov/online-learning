@@ -124,8 +124,12 @@ button.btn:active {
   font-size: 1.6rem;
   font-family: "DMSans-Bold";
 }
+.navbar__logo a span {
+  color: #086cf9;
+}
 .navbar .bar {
   display: none;
+  cursor: pointer;
 }
 .navbar .bar__line {
   background-color: #000;
@@ -156,27 +160,28 @@ button.btn:active {
 .navbar__link {
   font-size: 1rem;
   position: relative;
+  cursor: pointer;
 }
 .navbar__link:not(:first-child) {
   margin-left: 1.5rem;
 }
-.navbar__link.active > * {
+.navbar__link.active > span, .navbar__link.active > span a {
   color: #086cf9;
 }
-.navbar__link:not(:last-child) > a {
+.navbar__link:not(:last-child) > span {
   padding-bottom: 23px;
   border-bottom: solid #086cf9;
   border-bottom-width: 0;
   transition: all 0.1s ease;
 }
-.navbar__link:not(:last-child) > a:hover {
+.navbar__link:not(:last-child) > span:hover {
   border-bottom-width: 4px;
 }
-.navbar__dropdown, .navbar__dropdown-1 {
-  display: none;
-}
-.navbar__link:hover .navbar__dropdown {
+.navbar__link:hover .navbar__dropdown, .navbar__dropdown ul li:hover .navbar__dropdown-1 {
   display: block;
+}
+.navbar__dropdown {
+  display: none;
   position: absolute;
   z-index: 5;
   left: 0;
@@ -184,19 +189,22 @@ button.btn:active {
   background-color: #fff;
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.2);
 }
-.navbar__link:hover .navbar__dropdown ul li {
+.navbar__dropdown ul li {
   padding: 0.5rem;
   min-width: 150px;
   position: relative;
 }
-.navbar__link:hover .navbar__dropdown ul li span {
+.navbar__dropdown ul li span .fas {
   float: right;
 }
-.navbar__link:hover .navbar__dropdown ul li:hover {
+.navbar__dropdown ul li:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
-.navbar__dropdown ul li:hover .navbar__dropdown-1 {
-  display: block;
+.navbar__dropdown ul li:hover > * {
+  color: #086cf9;
+}
+.navbar__dropdown-1 {
+  display: none;
   position: absolute;
   left: 100%;
   top: 0;
@@ -212,7 +220,6 @@ button.btn:active {
     top: 100%;
     right: 0;
     background-color: #fff;
-    align-items: flex-start;
     flex-direction: column;
     transform: translateX(100%);
     transition: all 0.3s ease;
@@ -227,22 +234,37 @@ button.btn:active {
     margin-left: 0 !important;
     padding: 10px;
     width: 100%;
+    position: relative;
+    height: 40px;
   }
   .navbar__link:last-child a {
     display: block;
   }
-  .navbar__link span {
+  .navbar__link span .fas {
     float: right;
   }
-  .navbar__link:not(:last-child) > a {
+  .navbar__link:not(:last-child) > span {
     padding-bottom: 0;
     transition: all 0.1s ease;
   }
-  .navbar__link:not(:last-child) > a:hover {
+  .navbar__link:not(:last-child) > span:hover {
     border-bottom: 0;
   }
-  .navbar__link:hover .navbar__dropdown {
-    display: none;
+  .navbar__link:not(:last-child):hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .navbar__dropdown {
+    display: block;
+    position: static;
+    z-index: 1;
+    box-shadow: none;
+    width: 100%;
+    overflow: hidden;
+    height: 0px;
+    transition: all 0.3s ease;
+  }
+  .navbar__dropdown.active {
+    height: 100px;
   }
 }
 .header {
@@ -403,6 +425,15 @@ button.btn:active {
     width: 70px;
     height: 70px;
     opacity: 0;
+  }
+}
+@media (max-width: 768px) {
+  .about .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about__content, .about__video {
+    max-width: 100%;
   }
 }
 .services .container {
@@ -631,7 +662,7 @@ button.btn:active {
 }
 .event__badge {
   position: absolute;
-  z-index: 10;
+  z-index: 5;
   background-color: #086cf9;
   color: #fff;
   padding: 0.5rem 0.8rem;
@@ -814,7 +845,8 @@ button.btn:active {
   color: #FCFCFC;
 }
 .subscribe .section__subtitle {
-  margin: 1rem auto 2rem;
+  margin: auto;
+  padding: 1rem 1.5rem;
 }
 .subscribe__form {
   border-radius: 4px;
@@ -886,6 +918,52 @@ button.btn:active {
 }
 .footer__item a:hover {
   margin-left: 0.5rem;
+}
+
+@media (max-width: 960px) {
+  .subscribe .section__subtitle {
+    text-align: center;
+    padding: 1rem 0;
+    width: 80%;
+  }
+  .subscribe__form {
+    width: 64%;
+    flex-direction: column;
+  }
+  .subscribe__form-input {
+    border-bottom: 1px solid #222;
+  }
+  .subscribe__form .btn {
+    margin-top: 12px;
+  }
+}
+@media (max-width: 640px) {
+  .subscribe .section__subtitle {
+    width: 100%;
+  }
+  .subscribe__box {
+    padding: 1rem;
+  }
+  .subscribe__form {
+    width: 90%;
+  }
+  .subscribe__form-input {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .section__title {
+    font-size: 1.8rem;
+  }
+
+  .section__subtitle {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+
+  .about .container, .blog .container, .counter .container, .courses .container, .event .container, .footer .container, .mentors .container, .services .container, .subscribe .container, .testimonials .container {
+    padding: 30px 15px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

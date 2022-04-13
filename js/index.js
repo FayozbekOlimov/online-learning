@@ -131,6 +131,14 @@ for (let i = 0; i < navbarLinks.length - 1; i++) {
     });
 }
 
+// ===== DROPDOWN ===== //
+dropdownLink = document.querySelectorAll('.navbar__dropdown');
+dropdownLink.forEach((item) => {
+    item.parentNode.addEventListener('click', function() {
+        item.classList.toggle('active');
+    })
+})
+
 // ===== BAR ===== //
 const bar = document.querySelector('.bar');
 
