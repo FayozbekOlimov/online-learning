@@ -1,0 +1,57 @@
+@use "./base" as base;
+
+@media (max-width: 960px) {
+    .subscribe {
+        .section__subtitle {
+            text-align: center;
+            padding: 1rem 0;
+            width: 80%;
+        }
+        &__form {
+            width: 64%;
+            flex-direction: column;
+
+            &-input {
+                border-bottom: 1px solid base.$text-color1;
+            }
+
+            .btn {
+                margin-top: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .subscribe {
+        .section__subtitle {
+            width: 100%;
+        }
+        &__box {
+            padding: 1rem;
+        }
+
+        &__form {
+            width: 90%;
+
+            &-input {
+                padding: 0.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .section__title {
+        font-size: 1.8rem;
+    }
+    .section__subtitle {
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+    .about, .blog, .counter, .courses, .event, .footer, .mentors, .services, .subscribe, .testimonials {
+        .container {
+            padding: 30px 15px;
+        }
+    }
+}
