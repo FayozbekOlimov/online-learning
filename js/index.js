@@ -134,7 +134,7 @@ for (let i = 0; i < navbarLinks.length - 1; i++) {
 // ===== DROPDOWN ===== //
 dropdownLink = document.querySelectorAll('.navbar__dropdown');
 dropdownLink.forEach((item) => {
-    item.parentNode.addEventListener('click', function() {
+    item.parentNode.addEventListener('click', function () {
         item.classList.toggle('active');
     })
 })
@@ -147,6 +147,14 @@ bar.addEventListener('click', () => {
     document.querySelector('.navbar__links').classList.toggle('show-menu');
 
     lines.forEach((l, index) => {
-        l.classList.toggle(`line${index+1}`);
+        l.classList.toggle(`line${index + 1}`);
     });
 });
+
+// ===== COUNTER UP ===== //
+const options = { separator: "", suffix: "+"};
+
+const teacherCount = new CountUp("teacher-count", 1, 85, 0, 0, options).start();
+const studentCount = new CountUp("student-count", 1, 850, 0, 0, options).start();
+const courseCount = new CountUp("course-count", 1, 55, 0, 0, options).start();
+const countryCount = new CountUp("country-count", 1, 25, 0, 0, options).start();

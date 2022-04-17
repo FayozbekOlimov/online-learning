@@ -19,17 +19,8 @@
     }
 
     &__text {
-        small {
-            display: block;
-            font-size: .95rem;
-            margin: 1rem 0;
-        }
-
         p {
-            font-size: 1.1rem;
-        }
-
-        small, p {
+            font-size: 1rem;
             margin: 1rem 0;
         }
 
@@ -39,12 +30,13 @@
     }
 
     &__video {
-        height: 400px;
+        height: 360px;
         position: relative;
 
         video {
             width: 100%;
             height: 100%;
+            border-radius: 6px;
             object-fit: cover;
             cursor: pointer;
 
@@ -71,7 +63,7 @@
         background-color: rgba($color: base.$primary-color, $alpha: .9);
         pointer-events: none;
         animation: animReverse .4s ease-out;
-        
+
         &.anim {
             animation: anim 1s ease-in-out forwards;
         }
@@ -93,24 +85,6 @@
             top: 0;
             height: 100%;
             background-color: rgb(255, 38, 0);
-
-            // &::after {
-            //     content: "";
-            //     position: absolute;
-            //     top: 50%;
-            //     left: calc(100% - 5px);
-            //     transform: translateY(-50%);
-            //     width: 0;
-            //     height: 0;
-            //     transition: all 0.2s ease;
-            //     border-radius: 50%;
-            //     background-color: inherit;
-            // }
-
-            // &:hover::after {
-            //     width: 10px;
-            //     height: 10px;
-            // }
         }
     }
 }
@@ -127,18 +101,5 @@
         width: 70px;
         height: 70px;
         opacity: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .about {
-        .container {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        &__content, &__video {
-            max-width: 100%;
-        }
     }
 }

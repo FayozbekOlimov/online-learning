@@ -294,7 +294,7 @@ button.btn:active {
   margin: 1rem 0;
 }
 .header__bottom {
-  width: 100%;
+  width: 90%;
   padding: 0.8rem;
   color: #222;
   display: flex;
@@ -348,27 +348,21 @@ button.btn:active {
   line-height: 1;
   color: #222;
 }
-.about__text small {
-  display: block;
-  font-size: 0.95rem;
-  margin: 1rem 0;
-}
 .about__text p {
-  font-size: 1.1rem;
-}
-.about__text small, .about__text p {
+  font-size: 1rem;
   margin: 1rem 0;
 }
 .about__text .btn {
   display: inline-block;
 }
 .about__video {
-  height: 400px;
+  height: 360px;
   position: relative;
 }
 .about__video video {
   width: 100%;
   height: 100%;
+  border-radius: 6px;
   object-fit: cover;
   cursor: pointer;
 }
@@ -425,15 +419,6 @@ button.btn:active {
     width: 70px;
     height: 70px;
     opacity: 0;
-  }
-}
-@media (max-width: 768px) {
-  .about .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .about__content, .about__video {
-    max-width: 100%;
   }
 }
 .services .container {
@@ -756,7 +741,6 @@ button.btn:active {
 }
 .blog .btn {
   margin-top: 2rem;
-  padding: 15px 24px;
   font-size: 1rem;
 }
 
@@ -937,7 +921,65 @@ button.btn:active {
     margin-top: 12px;
   }
 }
+@media (max-width: 768px) {
+  .section__title {
+    font-size: 1.8rem;
+  }
+
+  .section__subtitle {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+
+  .about .container, .blog .container, .counter .container, .courses .container, .event .container, .footer .container, .mentors .container, .services .container, .subscribe .container, .testimonials .container {
+    padding: 30px 15px;
+  }
+
+  .header__bottom {
+    width: 100%;
+    top: initial;
+    bottom: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+  .header__bottom-icon {
+    display: none;
+  }
+  .header__bottom-item {
+    flex-direction: column;
+  }
+  .header__bottom-info {
+    text-align: center;
+  }
+  .header__bottom-info h5 {
+    font-size: 1.2rem;
+  }
+
+  .about .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about__content, .about__video {
+    max-width: 100%;
+  }
+  .about__video {
+    width: 90%;
+    margin-top: 1.25rem;
+    height: 280px;
+  }
+  .about .play-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+}
 @media (max-width: 640px) {
+  .btn {
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
   .subscribe .section__subtitle {
     width: 100%;
   }
@@ -951,18 +993,12 @@ button.btn:active {
     padding: 0.5rem;
   }
 }
-@media (max-width: 768px) {
-  .section__title {
-    font-size: 1.8rem;
+@media (max-width: 420px) {
+  .header__bottom-info {
+    margin: 0;
   }
-
-  .section__subtitle {
-    width: 80%;
-    margin-bottom: 1rem;
-  }
-
-  .about .container, .blog .container, .counter .container, .courses .container, .event .container, .footer .container, .mentors .container, .services .container, .subscribe .container, .testimonials .container {
-    padding: 30px 15px;
+  .header__text, .header__title {
+    line-height: 1;
   }
 }
 
