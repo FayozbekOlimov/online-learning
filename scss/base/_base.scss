@@ -10,17 +10,17 @@ $font-bold: "DMSans-Bold";
 // ===== fonts ===== //
 @font-face {
     font-family: $font-regular;
-    src: url("../../fonts/DMSans-Regular.ttf");
+    src: url("../fonts/DMSans-Regular.ttf");
 }
 
 @font-face {
     font-family: $font-medium;
-    src: url("../../fonts/DMSans-Medium.ttf");
+    src: url("../fonts/DMSans-Medium.ttf");
 }
 
 @font-face {
     font-family: $font-bold;
-    src: url("../../fonts/DMSans-Bold.ttf");
+    src: url("../fonts/DMSans-Bold.ttf");
 }
 
 * {

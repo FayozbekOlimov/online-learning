@@ -1,14 +1,14 @@
 @font-face {
   font-family: "DMSans-Regular";
-  src: url("../../fonts/DMSans-Regular.ttf");
+  src: url("../fonts/DMSans-Regular.ttf");
 }
 @font-face {
   font-family: "DMSans-Medium";
-  src: url("../../fonts/DMSans-Medium.ttf");
+  src: url("../fonts/DMSans-Medium.ttf");
 }
 @font-face {
   font-family: "DMSans-Bold";
-  src: url("../../fonts/DMSans-Bold.ttf");
+  src: url("../fonts/DMSans-Bold.ttf");
 }
 * {
   margin: 0;
@@ -268,7 +268,7 @@ button.btn:active {
   }
 }
 .header {
-  background-image: url("../../img/header-bg.jpg");
+  background-image: url("../img/header-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
