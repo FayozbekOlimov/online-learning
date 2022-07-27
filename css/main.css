@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 12px 16px;
   border-radius: 5px;
   font-family: "DMSans-Regular";
-  font-size: 1.1rem;
+  font-size: 17.6px;
   transition: background 0.3s linear;
 }
 
@@ -92,7 +92,7 @@ button.btn:active {
 }
 
 .section__title {
-  font-size: 2.4rem;
+  font-size: 38.4px;
   text-align: center;
   text-transform: capitalize;
   color: #222;
@@ -121,7 +121,7 @@ button.btn:active {
   color: #222;
 }
 .navbar__logo a {
-  font-size: 1.6rem;
+  font-size: 25.6px;
   font-family: "DMSans-Bold";
 }
 .navbar__logo a span {
@@ -159,7 +159,7 @@ button.btn:active {
   height: 100%;
 }
 .navbar__link {
-  font-size: 1rem;
+  font-size: 16px;
   position: relative;
   cursor: pointer;
   height: 100%;
@@ -219,7 +219,7 @@ button.btn:active {
   text-align: center;
 }
 .header__text {
-  font-size: 1rem;
+  font-size: 16px;
   text-align: center;
   width: 90%;
   margin: 1rem 0;
@@ -258,15 +258,15 @@ button.btn:active {
   object-fit: cover;
 }
 .header__bottom-info h5 {
-  font-size: 1.5rem;
+  font-size: 24px;
 }
 .header__bottom-info small {
   color: #086cf9;
-  font-size: 0.9rem;
+  font-size: 14.4px;
 }
 
 .about .container {
-  padding: 100px 15px 50px;
+  padding: 80px 15px 40px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -280,14 +280,14 @@ button.btn:active {
   color: #222;
 }
 .about__text p {
-  font-size: 1rem;
+  font-size: 16px;
   margin: 1rem 0;
 }
 .about__text .btn {
   display: inline-block;
 }
 .about__video {
-  height: 360px;
+  height: 320px;
   position: relative;
 }
 .about__video iframe {
@@ -303,7 +303,7 @@ button.btn:active {
 .services .container {
   flex-direction: column;
   align-items: center;
-  padding: 50px 15px;
+  padding: 40px 15px;
 }
 .services__items {
   width: 100%;
@@ -346,7 +346,7 @@ button.btn:active {
 .courses .container {
   flex-direction: column;
   align-items: center;
-  padding: 50px 15px;
+  padding: 40px 15px;
 }
 .courses__list {
   width: 100%;
@@ -427,11 +427,11 @@ button.btn:active {
 }
 .courses .btn {
   margin-top: 2rem;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 .mentors .container {
-  padding: 50px 15px;
+  padding: 40px 15px;
   flex-direction: column;
   align-items: center;
 }
@@ -497,7 +497,7 @@ button.btn:active {
 .event .container {
   flex-direction: column;
   align-items: center;
-  padding: 50px 15px;
+  padding: 40px 15px;
 }
 .event__list {
   width: 100%;
@@ -555,7 +555,7 @@ button.btn:active {
   background-color: #D3E5FE;
 }
 .counter .container {
-  padding: 50px 15px;
+  padding: 40px 15px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -572,7 +572,7 @@ button.btn:active {
 }
 
 .blog .container {
-  padding: 50px 15px;
+  padding: 40px 15px;
   flex-direction: column;
   align-items: center;
 }
@@ -620,11 +620,11 @@ button.btn:active {
 }
 .blog .btn {
   margin-top: 2rem;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 .testimonials .container {
-  padding: 50px 15px;
+  padding: 40px 15px;
   flex-direction: column;
   align-items: center;
 }
@@ -654,7 +654,7 @@ button.btn:active {
 }
 .testimonials .swiper-button-next::after,
 .testimonials .swiper-button-prev::after {
-  font-size: 1rem;
+  font-size: 16px;
   color: #D5D4D4;
 }
 .testimonials .swiper-button-next:hover,
@@ -674,7 +674,7 @@ button.btn:active {
 }
 .testimonials__txt {
   margin-bottom: 1rem;
-  font-size: 1rem;
+  font-size: 16px;
   color: #555;
 }
 .testimonials__about {
@@ -707,7 +707,7 @@ button.btn:active {
 }
 
 .subscribe .container {
-  padding: 50px 15px;
+  padding: 40px 15px;
   align-items: center;
   flex-direction: column;
 }
@@ -736,7 +736,7 @@ button.btn:active {
   flex: 1;
   padding: 12px 16px;
   color: #555;
-  font-size: 1.1rem;
+  font-size: 17.6px;
   background-color: transparent;
 }
 
@@ -744,7 +744,7 @@ button.btn:active {
   background-color: #D3E5FE;
 }
 .footer .container {
-  padding: 50px 15px;
+  padding: 40px 15px;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
@@ -759,7 +759,7 @@ button.btn:active {
 }
 .footer__subtitle {
   color: #555;
-  font-size: 0.9rem;
+  font-size: 14.4px;
   margin-bottom: 1rem;
 }
 .footer__social {
@@ -777,7 +777,7 @@ button.btn:active {
   margin-right: 0.5rem;
 }
 .footer__social-link a {
-  font-size: 1rem;
+  font-size: 16px;
   color: #086cf9;
 }
 .footer__item {
@@ -813,9 +813,9 @@ button.btn:active {
     margin-top: 12px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .section__title {
-    font-size: 1.8rem;
+    font-size: 28.8px;
   }
   .section__subtitle {
     width: 80%;
@@ -823,7 +823,7 @@ button.btn:active {
   }
   .btn {
     padding: 8px 12px;
-    font-size: 1rem;
+    font-size: 16px;
   }
   .about .container,
 .blog .container,
@@ -835,7 +835,7 @@ button.btn:active {
 .services .container,
 .subscribe .container,
 .testimonials .container {
-    padding: 30px 15px;
+    padding: 20px 15px;
   }
   .navbar .container {
     height: 65px;
@@ -899,7 +899,7 @@ button.btn:active {
     text-align: center;
   }
   .header__bottom-info h5 {
-    font-size: 1.2rem;
+    font-size: 19.2px;
   }
   .about .container {
     flex-direction: column;
@@ -909,21 +909,23 @@ button.btn:active {
     max-width: 100%;
   }
   .about__video {
-    width: 90%;
     margin-top: 1.25rem;
-    height: 280px;
+    height: 250px;
   }
   .about .play-btn {
     width: 50px;
     height: 50px;
-    font-size: 1.25rem;
+    font-size: 20px;
+  }
+  .blog .btn, .courses .btn {
+    margin-top: 1rem;
   }
 }
 @media (max-width: 640px) {
   .btn {
     padding: 8px 12px;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 16px;
   }
   .subscribe .section__subtitle {
     width: 100%;

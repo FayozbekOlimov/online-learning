@@ -23,9 +23,9 @@
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.section__title {
-		font-size: 1.8rem;
+		font-size: 28.8px;
 	}
 
 	.section__subtitle {
@@ -35,7 +35,7 @@
 
 	.btn {
 		padding: 8px 12px;
-		font-size: 1rem;
+		font-size: 16px;
 	}
 
 	.about,
@@ -49,7 +49,7 @@
 	.subscribe,
 	.testimonials {
 		.container {
-			padding: 30px 15px;
+			padding: 20px 15px;
 		}
 	}
 
@@ -130,7 +130,7 @@
 				text-align: center;
 
 				h5 {
-					font-size: 1.2rem;
+					font-size: 19.2px;
 				}
 			}
 		}
@@ -148,17 +148,22 @@
 		}
 
 		&__video {
-			width: 90%;
 			margin-top: 1.25rem;
-			height: 280px;
+			height: 250px;
 		}
 
 		.play-btn {
 			width: 50px;
 			height: 50px;
-			font-size: 1.25rem;
+			font-size: 20px;
 		}
 
+	}
+
+	.blog, .courses {
+		.btn {
+			margin-top: 1rem;
+		}
 	}
 }
 
@@ -166,7 +171,7 @@
 	.btn {
 		padding: 8px 12px;
 		border-radius: 4px;
-		font-size: 1rem;
+		font-size: 16px;
 	}
 
 	.subscribe {

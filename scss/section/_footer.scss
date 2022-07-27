@@ -4,7 +4,7 @@
     background-color: #D3E5FE;
 
     .container {
-        padding: 50px 15px;
+        padding: 40px 15px;
         flex-wrap: wrap;
         align-items: flex-start;
         justify-content: center;
@@ -22,7 +22,7 @@
     
     &__subtitle {
         color: base.$text-color3;
-        font-size: .9rem;
+        font-size: 14.4px;
         margin-bottom: 1rem;
     }
 
@@ -42,7 +42,7 @@
             }
 
             a {
-                font-size: 1rem;
+                font-size: 16px;
                 color: base.$primary-color;
             }
         }

@@ -23,7 +23,7 @@
 	}
 
 	&__text {
-		font-size: 1rem;
+		font-size: 16px;
 		text-align: center;
 		width: 90%;
 		margin: 1rem 0;
@@ -69,12 +69,12 @@
 
 		&-info {
 			h5 {
-				font-size: 1.5rem;
+				font-size: 24px;
 			}
 
 			small {
 				color: base.$primary-color;
-				font-size: .9rem;
+				font-size: 14.4px;
 			}
 		}
 	}
