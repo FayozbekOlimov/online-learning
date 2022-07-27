@@ -1,105 +1,47 @@
 @use "../base/base" as base;
 
 .about {
-    .container {
-        padding: 100px 15px 50px;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
+	.container {
+		padding: 100px 15px 50px;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
 
-    &__content, &__video {
-        max-width: calc(50% - 10px);
-        width: 100%;
-    }
+	&__content,
+	&__video {
+		max-width: calc(50% - 10px);
+		width: 100%;
+	}
 
-    &__title {
-        font-size: calc(1.9vw + 1rem);
-        line-height: 1;
-        color: base.$text-color1;
-    }
+	&__title {
+		font-size: calc(1.9vw + 1rem);
+		line-height: 1;
+		color: base.$text-color1;
+	}
 
-    &__text {
-        p {
-            font-size: 1rem;
-            margin: 1rem 0;
-        }
+	&__text {
+		p {
+			font-size: 1rem;
+			margin: 1rem 0;
+		}
 
-        .btn {
-            display: inline-block;
-        }
-    }
+		.btn {
+			display: inline-block;
+		}
+	}
 
-    &__video {
-        height: 360px;
-        position: relative;
+	&__video {
+		height: 360px;
+		position: relative;
 
-        video {
-            width: 100%;
-            height: 100%;
-            border-radius: 6px;
-            object-fit: cover;
-            cursor: pointer;
-
-        }
-
-        &:hover .video-line {
-            display: block;
-        }
-    }
-
-    .play-btn {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        color: #fff;
-        width: 60px;
-        height: 60px;
-        font-size: 1.8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        transform: translate(-50%, -50%);
-        background-color: rgba($color: base.$primary-color, $alpha: .9);
-        pointer-events: none;
-        animation: animReverse .4s ease-out;
-
-        &.anim {
-            animation: anim 1s ease-in-out forwards;
-        }
-    }
-
-    .video-line {
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 90%;
-        z-index: 5;
-        width: 100%;
-        height: 4px;
-        background-color: gray;
-
-        span {
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            background-color: rgb(255, 38, 0);
-        }
-    }
-}
-
-@keyframes anim {
-    to {
-        width: 80px;
-        height: 80px;
-        opacity: 0;
-    }
-}
-@keyframes animReverse {
-    from {
-        width: 70px;
-        height: 70px;
-        opacity: 0;
-    }
+		iframe {
+			width: 100%;
+			height: 100%;
+			border-radius: 6px;
+			border: none;
+			object-fit: cover;
+			cursor: pointer;
+			aspect-ratio: 16 / 9;
+		}
+	}
 }

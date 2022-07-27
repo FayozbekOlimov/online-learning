@@ -7,42 +7,54 @@
         align-items: center;
     }
 
-    .splide {
+    .slide-container {
         width: 100%;
-        
-        &__track {
-            margin: auto;
-            width: 92%;
+        padding-bottom: 30px;
+    }
+
+    .slide-content {
+        margin: 0 30px;
+        padding: 15px;
+        overflow: hidden;
+    }
+
+    .card {
+        padding: 1rem;
+        box-shadow: 5px 10px 12px rgba(0, 0, 0, 0.078);
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 1px solid #D5D4D4;
+        transition: all .3s linear;
+        top: calc(50% - 15px);
+        outline: none;
+
+        &::after {
+            font-size: 1rem;
+            color: #D5D4D4;
         }
 
-        &__slide {
-            width: 315px !important;
-            margin: 1rem;
-            padding: 1rem;
-            box-shadow: 5px 10px 12px rgba(0, 0, 0, 0.078);
-        }
+        &:hover {
+            background-color: base.$primary-color;
+            border-color: base.$primary-color;
 
-        &__pagination {
-            display: none;
-        }
-
-        &__arrow {
-            width: 35px;
-            height: 35px;
-            background-color: #fff;
-            border: 1px solid #D5D4D4;
-            transition: background .3s linear;
-
-            svg {
-                fill: #D5D4D4;
-                font-size: 1rem;
+            &::after {
+                color: #fff;
             }
-
-            &:hover {
-                background-color: base.$primary-color;
-                border-color: base.$primary-color;
-            }
         }
+    }
+
+    .swiper-button-next {
+        right: 0;
+    }
+
+    .swiper-button-prev {
+        left: 0;
     }
 
     &__txt {
@@ -60,7 +72,7 @@
         height: 60px;
         position: relative;
         margin-right: 1rem;
-        
+
         img {
             border-radius: 50%;
             position: absolute;
@@ -74,12 +86,12 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
+
         h4 {
             margin-bottom: 6px;
             color: base.$text-color1;
         }
-        
+
         small {
             color: base.$text-color3;
         }

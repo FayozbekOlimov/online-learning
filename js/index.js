@@ -70,55 +70,6 @@ mentorsData.map(mentor => {
 	mentorsList.appendChild(listItem);
 });
 
-// ===== SPLIDE JS ===== //
-new Splide('.splide', {
-	type: 'loop',
-	perPage: 3,
-	focus: 'center',
-}).mount();
-
-
-// ===== VIDEO TAG ===== //
-const video = document.querySelector('.about__video video');
-const playBtn = document.querySelector('.play-btn');
-const videoLine = document.querySelector('.video-line');
-const videoProgress = document.querySelector('.video-line span');
-
-let isPlay = false;
-
-video.addEventListener('click', playVideo);
-video.addEventListener('timeupdate', progress);
-videoLine.addEventListener('click', setProgress);
-
-
-function playVideo() {
-	if (!isPlay) {
-		isPlay = true;
-		video.play();
-		playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
-		playBtn.classList.add('anim');
-	} else {
-		isPlay = false;
-		video.pause();
-		playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
-		playBtn.classList.remove('anim');
-	}
-}
-
-function progress(e) {
-	let duration = e.srcElement.duration,
-		curTime = e.srcElement.currentTime;
-
-	videoProgress.style.width = `${curTime * 100 / duration}%`;
-}
-
-function setProgress(e) {
-	const width = this.clientWidth;
-	const widthX = e.offsetX;
-	const duration = video.duration;
-	video.currentTime = (widthX / width) * duration;
-}
-
 // ===== NAVBAR ===== //
 const navbarLinks = document.querySelectorAll('.navbar__link');
 
@@ -150,3 +101,34 @@ const teacherCount = new CountUp("teacher-count", 1, 85, 0, 0, options).start();
 const studentCount = new CountUp("student-count", 1, 850, 0, 0, options).start();
 const courseCount = new CountUp("course-count", 1, 55, 0, 0, options).start();
 const countryCount = new CountUp("country-count", 1, 25, 0, 0, options).start();
+
+// ===== SWIPER ===== //
+const swiper = new Swiper(".slide-content", {
+	slidesPerView: 3,
+	spaceBetween: 30,
+	loop: true,
+	centerSlide: 'true',
+	fade: 'true',
+	grabCursor: 'true',
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+		dynamicBullets: true,
+	},
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+		},
+		576: {
+			slidesPerView: 2,
+		},
+		950: {
+			slidesPerView: 3,
+		},
+	},
+});
