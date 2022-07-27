@@ -156,126 +156,57 @@ button.btn:active {
 .navbar__links {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 .navbar__link {
   font-size: 1rem;
   position: relative;
   cursor: pointer;
+  height: 100%;
+  line-height: 75px;
+  display: inline-block;
 }
 .navbar__link:not(:first-child) {
   margin-left: 1.5rem;
 }
-.navbar__link.active > span, .navbar__link.active > span a {
-  color: #086cf9;
-}
-.navbar__link:not(:last-child) > span {
-  padding-bottom: 23px;
-  border-bottom: solid #086cf9;
-  border-bottom-width: 0;
-  transition: all 0.1s ease;
-}
-.navbar__link:not(:last-child) > span:hover {
-  border-bottom-width: 4px;
-}
-.navbar__link:hover .navbar__dropdown, .navbar__dropdown ul li:hover .navbar__dropdown-1 {
-  display: block;
-}
-.navbar__dropdown {
-  display: none;
-  position: absolute;
-  z-index: 5;
-  left: 0;
-  top: 48px;
-  background-color: #fff;
-  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.2);
-}
-.navbar__dropdown ul li {
-  padding: 0.5rem;
-  min-width: 150px;
+.navbar__link:not(:last-child) a {
   position: relative;
+  overflow: hidden;
+  line-height: inherit;
+  display: inline-block;
 }
-.navbar__dropdown ul li span .fas {
-  float: right;
+.navbar__link:not(:last-child) a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #086cf9;
+  transition: bottom 0.3s ease;
 }
-.navbar__dropdown ul li:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+.navbar__link:not(:last-child) a:hover::before {
+  bottom: 0;
 }
-.navbar__dropdown ul li:hover > * {
+.navbar__link:not(:last-child) a.btn {
+  line-height: unset;
+}
+.navbar__link.active a {
   color: #086cf9;
 }
-.navbar__dropdown-1 {
-  display: none;
-  position: absolute;
-  left: 100%;
-  top: 0;
-  background-color: #fff;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+.navbar__link.active a::before {
+  bottom: 0;
 }
 
-@media (max-width: 768px) {
-  .navbar__links {
-    height: 100vh;
-    width: 200px;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #fff;
-    flex-direction: column;
-    transform: translateX(100%);
-    transition: all 0.3s ease;
-  }
-  .navbar__links.show-menu {
-    transform: translateX(0%);
-  }
-  .navbar .bar {
-    display: block;
-  }
-  .navbar__link {
-    margin-left: 0 !important;
-    padding: 10px;
-    width: 100%;
-    position: relative;
-    height: 40px;
-  }
-  .navbar__link:last-child a {
-    display: block;
-  }
-  .navbar__link span .fas {
-    float: right;
-  }
-  .navbar__link:not(:last-child) > span {
-    padding-bottom: 0;
-    transition: all 0.1s ease;
-  }
-  .navbar__link:not(:last-child) > span:hover {
-    border-bottom: 0;
-  }
-  .navbar__link:not(:last-child):hover {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-  .navbar__dropdown {
-    display: block;
-    position: static;
-    z-index: 1;
-    box-shadow: none;
-    width: 100%;
-    overflow: hidden;
-    height: 0px;
-    transition: all 0.3s ease;
-  }
-  .navbar__dropdown.active {
-    height: 100px;
-  }
-}
 .header {
   background-image: url("../img/header-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
   position: relative;
 }
 .header .container {
-  height: 89vh;
+  height: calc(100vh - 75px);
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -404,7 +335,7 @@ button.btn:active {
   left: 0;
   top: 0;
   height: 100%;
-  background-color: #ff2600;
+  background-color: rgb(255, 38, 0);
 }
 
 @keyframes anim {
@@ -925,16 +856,71 @@ button.btn:active {
   .section__title {
     font-size: 1.8rem;
   }
-
   .section__subtitle {
     width: 80%;
     margin-bottom: 1rem;
   }
-
-  .about .container, .blog .container, .counter .container, .courses .container, .event .container, .footer .container, .mentors .container, .services .container, .subscribe .container, .testimonials .container {
+  .btn {
+    padding: 8px 12px;
+    font-size: 1rem;
+  }
+  .about .container,
+.blog .container,
+.counter .container,
+.courses .container,
+.event .container,
+.footer .container,
+.mentors .container,
+.services .container,
+.subscribe .container,
+.testimonials .container {
     padding: 30px 15px;
   }
-
+  .navbar .container {
+    height: 65px;
+  }
+  .navbar__links {
+    height: 100vh;
+    width: 200px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+  }
+  .navbar__links.show-menu {
+    transform: translateX(0%);
+  }
+  .navbar .bar {
+    display: block;
+  }
+  .navbar__link {
+    width: 100%;
+    height: unset;
+    padding: 10px;
+  }
+  .navbar__link:not(:last-child) {
+    display: flex;
+    align-items: center;
+  }
+  .navbar__link:not(:last-child) a {
+    line-height: 1.7;
+    width: 100%;
+  }
+  .navbar__link:not(:last-child) a::before {
+    display: none;
+  }
+  .navbar__link:not(:first-child) {
+    margin-left: 0;
+  }
+  .navbar__link:last-child {
+    line-height: unset;
+  }
+  .header .container {
+    height: calc(100vh - 65px);
+  }
   .header__bottom {
     width: 100%;
     top: initial;
@@ -954,7 +940,6 @@ button.btn:active {
   .header__bottom-info h5 {
     font-size: 1.2rem;
   }
-
   .about .container {
     flex-direction: column;
     align-items: center;
@@ -979,7 +964,6 @@ button.btn:active {
     border-radius: 4px;
     font-size: 1rem;
   }
-
   .subscribe .section__subtitle {
     width: 100%;
   }

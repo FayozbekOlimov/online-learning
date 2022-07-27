@@ -1,18 +1,18 @@
 const formatK = a => {
-    if (a >= 1000) {
-        const b = '' + a / 1000;
-        return b.includes('.') ? b.substring(0, b.indexOf('.') + 2) + 'k' : b + 'k';
-    }
-    return a;
+	if (a >= 1000) {
+		const b = '' + a / 1000;
+		return b.includes('.') ? b.substring(0, b.indexOf('.') + 2) + 'k' : b + 'k';
+	}
+	return a;
 }
 
 // ===== COURSE DETAILS ===== //
 const coursesList = document.querySelector('.courses__list');
 courseData.map(item => {
-    const listItem = document.createElement('li');
-    listItem.classList.add('courses__item');
+	const listItem = document.createElement('li');
+	listItem.classList.add('courses__item');
 
-    listItem.innerHTML = `
+	listItem.innerHTML = `
         <div class="courses__item-img">
             <img src=${item.image} alt="course-img">
         </div>
@@ -39,17 +39,17 @@ courseData.map(item => {
         </div>
         <p class="courses__item-subtitle">Lorem ipsum dolor sit amet, consecte adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit.</p>
     `;
-    coursesList.appendChild(listItem);
+	coursesList.appendChild(listItem);
 });
 
 
 // ===== MENTORS DATA ===== //
 const mentorsList = document.querySelector('.mentors__list');
 mentorsData.map(mentor => {
-    const listItem = document.createElement('li');
-    listItem.classList.add('mentors__item');
+	const listItem = document.createElement('li');
+	listItem.classList.add('mentors__item');
 
-    listItem.innerHTML = `
+	listItem.innerHTML = `
         <div class="mentors__img">
             <img src=${mentor.image} alt="mentors-img">
         </div>
@@ -67,14 +67,14 @@ mentorsData.map(mentor => {
             <p class="mentors__info-courses">${mentor.info.course} Courses</p>
         </div>
     `;
-    mentorsList.appendChild(listItem);
+	mentorsList.appendChild(listItem);
 });
 
 // ===== SPLIDE JS ===== //
 new Splide('.splide', {
-    type: 'loop',
-    perPage: 3,
-    focus: 'center',
+	type: 'loop',
+	perPage: 3,
+	focus: 'center',
 }).mount();
 
 
@@ -92,67 +92,59 @@ videoLine.addEventListener('click', setProgress);
 
 
 function playVideo() {
-    if (!isPlay) {
-        isPlay = true;
-        video.play();
-        playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
-        playBtn.classList.add('anim');
-    } else {
-        isPlay = false;
-        video.pause();
-        playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
-        playBtn.classList.remove('anim');
-    }
+	if (!isPlay) {
+		isPlay = true;
+		video.play();
+		playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+		playBtn.classList.add('anim');
+	} else {
+		isPlay = false;
+		video.pause();
+		playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+		playBtn.classList.remove('anim');
+	}
 }
 
 function progress(e) {
-    let duration = e.srcElement.duration,
-        curTime = e.srcElement.currentTime;
+	let duration = e.srcElement.duration,
+		curTime = e.srcElement.currentTime;
 
-    videoProgress.style.width = `${curTime * 100 / duration}%`;
+	videoProgress.style.width = `${curTime * 100 / duration}%`;
 }
 
 function setProgress(e) {
-    const width = this.clientWidth;
-    const widthX = e.offsetX;
-    const duration = video.duration;
-    video.currentTime = (widthX / width) * duration;
+	const width = this.clientWidth;
+	const widthX = e.offsetX;
+	const duration = video.duration;
+	video.currentTime = (widthX / width) * duration;
 }
 
 // ===== NAVBAR ===== //
 const navbarLinks = document.querySelectorAll('.navbar__link');
 
 for (let i = 0; i < navbarLinks.length - 1; i++) {
-    navbarLinks[i].addEventListener('click', function () {
-        for (let j = 0; j < navbarLinks.length - 1; j++) {
-            navbarLinks[j].classList.remove('active');
-        }
-        this.classList.add('active');
-    });
+	navbarLinks[i].addEventListener('click', function () {
+		for (let j = 0; j < navbarLinks.length - 1; j++) {
+			navbarLinks[j].classList.remove('active');
+		}
+		this.classList.add('active');
+	});
 }
-
-// ===== DROPDOWN ===== //
-dropdownLink = document.querySelectorAll('.navbar__dropdown');
-dropdownLink.forEach((item) => {
-    item.parentNode.addEventListener('click', function () {
-        item.classList.toggle('active');
-    })
-})
 
 // ===== BAR ===== //
 const bar = document.querySelector('.bar');
 
 bar.addEventListener('click', () => {
-    const lines = bar.querySelectorAll('.bar__line');
-    document.querySelector('.navbar__links').classList.toggle('show-menu');
+	const lines = bar.querySelectorAll('.bar__line');
+	document.querySelector('.navbar__links').classList.toggle('show-menu');
 
-    lines.forEach((l, index) => {
-        l.classList.toggle(`line${index + 1}`);
-    });
+	lines.forEach((l, index) => {
+		l.classList.toggle(`line${index + 1}`);
+	});
 });
 
 // ===== COUNTER UP ===== //
-const options = { separator: "", suffix: "+"};
+const options = { separator: "", suffix: "+" };
 
 const teacherCount = new CountUp("teacher-count", 1, 85, 0, 0, options).start();
 const studentCount = new CountUp("student-count", 1, 850, 0, 0, options).start();

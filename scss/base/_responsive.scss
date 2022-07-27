@@ -1,118 +1,204 @@
 @use "./base" as base;
 
 @media (max-width: 960px) {
-    .subscribe {
-        .section__subtitle {
-            text-align: center;
-            padding: 1rem 0;
-            width: 80%;
-        }
-        &__form {
-            width: 64%;
-            flex-direction: column;
+	.subscribe {
+		.section__subtitle {
+			text-align: center;
+			padding: 1rem 0;
+			width: 80%;
+		}
 
-            &-input {
-                border-bottom: 1px solid base.$text-color1;
-            }
+		&__form {
+			width: 64%;
+			flex-direction: column;
 
-            .btn {
-                margin-top: 12px;
-            }
-        }
-    }
+			&-input {
+				border-bottom: 1px solid base.$text-color1;
+			}
+
+			.btn {
+				margin-top: 12px;
+			}
+		}
+	}
 }
 
 @media (max-width: 768px) {
-    .section__title {
-        font-size: 1.8rem;
-    }
-    .section__subtitle {
-        width: 80%;
-        margin-bottom: 1rem;
-    }
-    .about, .blog, .counter, .courses, .event, .footer, .mentors, .services, .subscribe, .testimonials {
-        .container {
-            padding: 30px 15px;
-        }
-    }
-    .header {
-        &__bottom {
-            width: 100%;
-            top: initial;
-            bottom: 0;
-            padding: 0;
-            border-radius: 0;
+	.section__title {
+		font-size: 1.8rem;
+	}
 
-            &-icon {
-                display: none;
-            }
-            &-item {
-                flex-direction: column;
-            }
-            &-info {
-                text-align: center;
-                h5 {
-                    font-size: 1.2rem;
-                }
-            }
-        }
-    }
-    .about {
-        .container {
-            flex-direction: column;
-            align-items: center;
-        }
-        &__content, &__video {
-            max-width: 100%;
-        }
-        &__video {
-            width: 90%;
-            margin-top: 1.25rem;
-            height: 280px;
-        }
+	.section__subtitle {
+		width: 80%;
+		margin-bottom: 1rem;
+	}
 
-        .play-btn {
-            width: 50px;
-            height: 50px;
-            font-size: 1.25rem;
-        }
+	.btn {
+		padding: 8px 12px;
+		font-size: 1rem;
+	}
 
-    }
+	.about,
+	.blog,
+	.counter,
+	.courses,
+	.event,
+	.footer,
+	.mentors,
+	.services,
+	.subscribe,
+	.testimonials {
+		.container {
+			padding: 30px 15px;
+		}
+	}
+
+	.navbar {
+		.container {
+			height: 65px;
+		}
+
+		&__links {
+			height: 100vh;
+			width: 200px;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			background-color: #fff;
+			flex-direction: column;
+			transform: translateX(100%);
+			transition: all .3s ease;
+
+			&.show-menu {
+				transform: translateX(0%);
+			}
+		}
+
+		.bar {
+			display: block;
+		}
+
+		&__link {
+			width: 100%;
+			height: unset;
+			padding: 10px;
+
+			&:not(:last-child) {
+				display: flex;
+				align-items: center;
+			}
+
+			&:not(:last-child) a {
+				line-height: 1.7;
+				width: 100%;
+
+				&::before {
+					display: none;
+				}
+			}
+
+			&:not(:first-child) {
+				margin-left: 0;
+			}
+
+			&:last-child {
+				line-height: unset;
+			}
+		}
+	}
+
+	.header {
+		.container {
+			height: calc(100vh - 65px);
+		}
+		&__bottom {
+			width: 100%;
+			top: initial;
+			bottom: 0;
+			padding: 0;
+			border-radius: 0;
+
+			&-icon {
+				display: none;
+			}
+
+			&-item {
+				flex-direction: column;
+			}
+
+			&-info {
+				text-align: center;
+
+				h5 {
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+
+	.about {
+		.container {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__content,
+		&__video {
+			max-width: 100%;
+		}
+
+		&__video {
+			width: 90%;
+			margin-top: 1.25rem;
+			height: 280px;
+		}
+
+		.play-btn {
+			width: 50px;
+			height: 50px;
+			font-size: 1.25rem;
+		}
+
+	}
 }
 
 @media (max-width: 640px) {
-    .btn {
-        padding: 8px 12px;
-        border-radius: 4px;
-        font-size: 1rem;
-    }
-    .subscribe {
-        .section__subtitle {
-            width: 100%;
-        }
-        &__box {
-            padding: 1rem;
-        }
+	.btn {
+		padding: 8px 12px;
+		border-radius: 4px;
+		font-size: 1rem;
+	}
 
-        &__form {
-            width: 90%;
+	.subscribe {
+		.section__subtitle {
+			width: 100%;
+		}
 
-            &-input {
-                padding: 0.5rem;
-            }
-        }
-    }
+		&__box {
+			padding: 1rem;
+		}
+
+		&__form {
+			width: 90%;
+
+			&-input {
+				padding: 0.5rem;
+			}
+		}
+	}
 }
 
 @media (max-width: 420px) {
-    .header {
-        &__bottom {
-            &-info {
-                margin: 0;
-            }
-        }
-        &__text, &__title {
-            line-height: 1;
-        }
-    }
+	.header {
+		&__bottom {
+			&-info {
+				margin: 0;
+			}
+		}
+
+		&__text,
+		&__title {
+			line-height: 1;
+		}
+	}
 }

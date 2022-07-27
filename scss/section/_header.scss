@@ -1,79 +1,81 @@
 @use "../base/base.scss";
 
 .header {
-    background-image: url("../img/header-bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    
-    .container {
-        height: 89vh;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        color: #fff;
-        position: relative;
-    }
+	background-image: url("../img/header-bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	position: relative;
 
-    &__title {
-        font-size: calc(2.8vw + 1rem);
-        text-transform: capitalize;
-        text-align: center;
-    }
+	.container {
+		height: calc(100vh - 75px);
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		color: #fff;
+		position: relative;
+	}
 
-    &__text {
-        font-size: 1rem;
-        text-align: center;
-        width: 90%;
-        margin: 1rem 0;
-    }
+	&__title {
+		font-size: calc(2.8vw + 1rem);
+		text-transform: capitalize;
+		text-align: center;
+	}
 
-    &__bottom {
-        width: 90%;
-        padding: .8rem;
-        color: base.$text-color1;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-around;
-        background-color: #fff;
-        position: absolute;
-        top: 90%;
-        border-radius: 4px;
-        box-shadow: 0px 11px 35px 0px rgba(0, 0, 0, 0.08);
+	&__text {
+		font-size: 1rem;
+		text-align: center;
+		width: 90%;
+		margin: 1rem 0;
+	}
 
-        &-item {
-            display: flex;
-            align-items: center;
-            margin: .5rem;
-        }
+	&__bottom {
+		width: 90%;
+		padding: .8rem;
+		color: base.$text-color1;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-around;
+		background-color: #fff;
+		position: absolute;
+		top: 90%;
+		border-radius: 4px;
+		box-shadow: 0px 11px 35px 0px rgba(0, 0, 0, 0.08);
 
-        &-icon, &-info {
-            margin: 5px;
-        }
+		&-item {
+			display: flex;
+			align-items: center;
+			margin: .5rem;
+		}
 
-        &-icon {
-            position: relative;
-            width: 60px;
-            height: 55px;
+		&-icon,
+		&-info {
+			margin: 5px;
+		}
 
-            img {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                object-fit: cover;
-            }
-        }
+		&-icon {
+			position: relative;
+			width: 60px;
+			height: 55px;
 
-        &-info {
-            h5 {
-                font-size: 1.5rem;
-            }
-            small {
-                color: base.$primary-color;
-                font-size: .9rem;
-            }
-        }
-    }
+			img {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				object-fit: cover;
+			}
+		}
+
+		&-info {
+			h5 {
+				font-size: 1.5rem;
+			}
+
+			small {
+				color: base.$primary-color;
+				font-size: .9rem;
+			}
+		}
+	}
 }
